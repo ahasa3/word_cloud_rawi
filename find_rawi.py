@@ -5,11 +5,10 @@ def find_perawi(hadis):
   for i, kt in enumerate(splited):
     if kt == "menceritakan" or kt == "mendengar" or kt == "berkata" or kt == "mengabarkan" or kt == "dari" or kt == "bertanya" or kt == "bahwa":
       sanad.append(i)
-    elif kt == "bersabda" or kt == "rasulullah" or kt == "nabi" or kt == 'rasul':# or kt == 'shallallahu':
+    elif kt == "bersabda" or kt == "rasulullah" or kt == "nabi" or kt == 'rasul':
       sanad.append(i)
       matan.append(' '.join(splited[i:]))
       break
-  # matan = f'sanad: {" ".join(splited[sanad[len(sanad)-1]])}
   temp_rw = []
   for i in range(len(sanad)-1):
     temp_rw.append(splited[sanad[i]:sanad[i+1]])

@@ -24,16 +24,16 @@ def find_perawi(hadis):
         elif ']' in j:
             temp.append(j)
             r = False
-            merge = ' '.join(temp).replace('[','').replace(']','').replace("radliallahu 'anhu", '')
+            merge = ' '.join(temp).replace('[','').replace(']','').replace("radliallahu", '').replace("anhu",'')
             if merge not in perawi:
               perawi.append(merge)
             break
         elif j == "bin" and r==False:
-          merge = ' '.join(i[idx-1:idx+2]).replace("radliallahu 'anhu", '')
+          merge = ' '.join(i[idx-1:idx+2]).replace("radliallahu", '').replace("anhu",'')
           if merge not in perawi:
             perawi.append(merge)
         elif j == "ibnu" and r==False:
-          merge = ' '.join(i[idx:idx+2]).replace("radliallahu 'anhu", '')
+          merge = ' '.join(i[idx:idx+2]).replace("radliallahu", '').replace("anhu",'')
           if merge not in perawi:
             perawi.append(merge)
         if r == True:
